@@ -1,0 +1,13 @@
+{
+  "name": "ecommerce-js-final",
+  "version": "1.0.0",
+  "description": "Proyecto final de JavaScript",
+  "scripts": {
+    "start": "live-server --port=5500",
+    "sass": "sass --watch assets/scss/style.scss:assets/css/styles.css"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "sass": "^1.69.5"
+  }
+}

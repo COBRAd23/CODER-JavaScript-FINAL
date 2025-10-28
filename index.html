@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academy Pro | Academia Online de Programación</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- External Libraries -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo-container">
+                <h1>Academy Pro</h1>
+                <p>Aprende programación online</p>
+            </div>
+            <div class="nav-actions">
+                <div class="cart-icon" id="cart-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span id="cart-count" class="cart-count">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Products Grid -->
+        <section id="products-view" class="products-view active">
+            <div class="section-header">
+                <h2>Cursos Disponibles</h2>
+                <div class="filters">
+                    <select id="sort-filter" class="filter-select">
+                        <option value="default">Ordenar por...</option>
+                        <option value="price-asc">Precio: Menor a Mayor</option>
+                        <option value="price-desc">Precio: Mayor a Menor</option>
+                        <option value="name">Nombre</option>
+                    </select>
+                </div>
+            </div>
+            <div id="products-container" class="products-grid">
+                <!-- Products will be injected here -->
+            </div>
+        </section>
+
+        <!-- Shopping Cart View -->
+        <section id="cart-view" class="cart-view">
+            <div class="cart-header">
+                <button class="back-button" id="back-to-products">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    Volver a Productos
+                </button>
+                <h2>Tu Carrito</h2>
+            </div>
+            <div class="cart-content">
+                <div id="empty-cart-message" class="empty-cart-message">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <p>Tu carrito está vacío</p>
+                    <button class="btn-secondary" id="start-shopping">Comenzar a comprar</button>
+                </div>
+
+                <div id="cart-items" class="cart-items">
+                    <!-- Cart items will be injected here -->
+                </div>
+
+                <div class="cart-summary">
+                    <div class="summary-line">
+                        <span>Subtotal:</span>
+                        <span id="cart-subtotal">$0.00</span>
+                    </div>
+                    <div class="summary-line">
+                        <span>IVA (10%):</span>
+                        <span id="cart-tax">$0.00</span>
+                    </div>
+                    <div class="summary-line shipping">
+                        <span>Envío:</span>
+                        <span id="cart-shipping">$0.00</span>
+                    </div>
+                    <div class="summary-line total">
+                        <span>Total:</span>
+                        <span id="cart-total">$0.00</span>
+                    </div>
+
+                    <div class="cart-actions">
+                        <button id="checkout-btn" class="btn-primary" disabled>
+                            Finalizar Compra
+                        </button>
+                        <button id="clear-cart-btn" class="btn-secondary" disabled>
+                            Vaciar Carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Academy Pro | Academia Online de Programación</p>
+    </footer>
+
+    <!-- External Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/app.js" type="module"></script>
+</body>
+</html>
